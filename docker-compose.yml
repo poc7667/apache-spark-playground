@@ -1,0 +1,13 @@
+master:
+  image: sequenceiq/spark:1.5.1
+  command:  /etc/bootstrap.sh
+  hostname: master
+  # environment:
+    # SPARK_CONF_DIR: /conf
+    # MASTER: spark://master:7077
+  ports:
+    - 8042:8042
+    - 8088:8088
+    - 8080:8080
+  volumes:
+    - ./data:/data
